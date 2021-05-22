@@ -19,13 +19,22 @@
 
 namespace miroil
 {
-    class Compositor 
-    {
-        public:
-        virtual ~Compositor() {};
-        virtual void start() = 0;
-        virtual void stop()  = 0;        
-    };
+
+class Compositor 
+{
+    public:
+    virtual ~Compositor();
+
+    Compositor& operator=(Compositor const&) = delete;
+    
+    virtual void start() = 0;
+    virtual void stop()  = 0;        
+
+protected:
+    Compositor() = default;
+    Compositor(Compositor const&) = delete;
+};
+
 }
 
 #endif // MIROIL_COMPOSITOR_H

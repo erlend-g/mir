@@ -20,6 +20,7 @@ target_include_directories(miroil-internal
 )
 
 add_library(miroil SHARED
+    compositor.cpp ${miroil_include}/miroil/compositor.h    
     edid.cpp ${miroil_include}/miroil/edid.h
     mirbuffer.cpp ${miroil_include}/miroil/mirbuffer.h
     persist_display_config.cpp ${miroil_include}/miroil/persist_display_config.h
